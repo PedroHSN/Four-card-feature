@@ -25,6 +25,31 @@ header a {
 	color: aqua;
 	text-decoration: underline;
 }
+.list ul {
+	list-style: none;
+	width: 100%;
+}
+.list ul li {
+	position: relative;
+	cursor: pointer;
+	width: 100%;
+	height: auto;
+	padding: 20px 25px;
+	background-color: #1d2031;
+	transition: .3s ease background-color;
+	margin-bottom: 1px;
+	overflow: hidden;
+}
+.list ul li:hover {
+	background-color: #22232b;
+}
+.list ul li h1 {
+	line-height: 40px;
+	color: rgba(255, 255, 255, 0.76);
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 22px;
+}
 
 .attribution {
     font-size: 11px;
