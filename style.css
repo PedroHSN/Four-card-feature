@@ -102,6 +102,16 @@ header a {
 	width: 25px;
     cursor: pointer;
 }
+.list li.active {
+	cursor: auto;
+}
+.list li.active img {
+	visibility: visible;
+}
+.list li.active .buttons {
+	visibility: visible;
+	height: 60px;
+}
 
 .attribution {
     font-size: 11px;
