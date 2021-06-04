@@ -126,11 +126,31 @@ header a {
 	animation-delay: .2s;
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+@keyframes button-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@media only screen and (max-width: 550px) {
+	.list li.active .buttons {
+		height: 80px;
+		justify-content: flex-start;
+	}
+	.list ul li h1 {
+		font-size: 18px;
+		letter-spacing: 2px;
+	}
+	header h1 {
+		font-size: 22px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	header h1 {
+		font-size: 40px;
+	}
+}
