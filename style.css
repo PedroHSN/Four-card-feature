@@ -1,156 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-	font-family: 'Open Sans', sans-serif;
-	min-height: 100vh;
-	padding-bottom: 100px;
-	background-color: #0c1120;
-	color: #ffffff;
-	outline: none;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 15px;
+  font-family: poppins, sans-serif;
+  background: hsl(0, 0%, 98%);
+}
+p {
+  color: hsl(229, 6%, 66%);
+}
+header{
+  white-space: nowrap;
+}
+.top-container {
+  text-align: center;
+}
+.top-container h1 {
+  font-size: 2rem;
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+}
+.top-container h2 {
+  margin-top: -20px;
+  font-size: 2rem;
+  color: hsl(234, 12%, 34%);
+}
+.top-container p {
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
-header {
-	padding: 50px 30px 50px 30px;
-	text-align: center;
+.col {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 18px auto;
+  height: 200px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
-header h1 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	font-size: 30px;
+.col img {
+  position: absolute;
+  padding: 15px;
+  right: 0;
+  bottom: 0;
 }
-header h2 {
-	margin-top: 10px;
-	font-weight: 400;
-	font-size: 20px;
+.col h3 {
+  font-size: 1.3rem;
+  color: hsl(234, 12%, 34%);
 }
-header a {
-	color: aqua;
-	text-decoration: underline;
+.col::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
 }
-.list ul {
-	list-style: none;
-	width: 100%;
+.col-red::after {
+  background-color: hsl(0, 100%, 50%);
 }
-.list ul li {
-	position: relative;
-	cursor: pointer;
-	width: 100%;
-	height: auto;
-	padding: 20px 25px;
-	background-color: #1d2031;
-	transition: .3s ease background-color;
-	margin-bottom: 1px;
-	overflow: hidden;
+.col-cyan::after {
+  background-color: hsl(180, 100%, 50%);
 }
-.list ul li:hover {
-	background-color: #22232b;
+.col-orange::after {
+  background-color: hsl(39, 100%, 50%);
 }
-.list ul li h1 {
-	line-height: 40px;
-	color: rgba(255, 255, 255, 0.76);
-	text-decoration: none;
-	font-weight: 400;
-	font-size: 22px;
+.col-blue::after {
+  background-color: hsl(240, 100%, 50%);
 }
-
-.list .buttons {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	height: 0;
-	transition: .3s ease height;
-	visibility: hidden;
-}
-.list ul li .buttons a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: no-wrap;
-	padding: 5px 10px;
-	margin: 5px 3px;
-	background-color: #2d2f35;
-	border-radius: 8px;
-	font-size: 18px;
-	color: rgba(255, 255, 255, 0.712);
-	text-decoration: none;
-	transition-delay: .1s;
-	transition: .5s ease;
-	transition-property: opacity, margin-top, background-color;
-	opacity: 0;
-}
-
-.list ul li .buttons a img {
-	display: inline-block;
-	height: 25px;
-	width: 25px;
-	padding-right: 5px;
-}
-.list ul li .buttons a p {
-	display: inline-block;
-}
-
-.list ul li a:hover {
-	background-color: black;
-}
-.list li .close {
-	visibility: hidden;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	height: 25px;
-	width: 25px;
-    cursor: pointer;
-}
-.list li.active {
-	cursor: auto;
-}
-.list li.active img {
-	visibility: visible;
-}
-.list li.active .buttons {
-	visibility: visible;
-	height: 60px;
-}
-
-.list li.active .buttons a {
-	animation: button-animation .5s ease forwards;
-}
-.list li.active .buttons a:nth-child(1) {
-	animation-delay: .1s;
-}
-.list li.active .buttons a:nth-child(2) {
-	animation-delay: .15s;
-}
-.list li.active .buttons a:nth-child(3) {
-	animation-delay: .2s;
-}
-
-@keyframes button-animation {
-	0% {
-		opacity: 0;
-		transform: translateY(40px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0px);
-	}
-}
-@media only screen and (max-width: 550px) {
-	.list li.active .buttons {
-		height: 80px;
-		justify-content: flex-start;
-	}
-	.list ul li h1 {
-		font-size: 18px;
-		letter-spacing: 2px;
-	}
-	header h1 {
-		font-size: 22px;
-	}
-}
-@media only screen and (min-width: 768px) {
-	header h1 {
-		font-size: 40px;
-	}
+@media (min-width: 768px) {
+  .box-section {
+    display: flex;
+    align-items: center;
+  }
+  .col {
+    margin: 18px;
+  }
 }
